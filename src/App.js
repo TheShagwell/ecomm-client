@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import UploadProduct from "./components/Products/UploadProducts";
 
 function App() {
+  const [products, setProducts] = useState(false)
+
+  useEffect(() => {
+    getProducts()
+  }, [])
+
+  function getProducts() {
+    fetch('http://localhost:8080/products').then(res => {
+      return res.text()
+    }).then(data => {
+      setProducts(data)
+    })
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {products ? products : 'There are no products here'}
+      <UploadProduct />
     </div>
   );
 }
