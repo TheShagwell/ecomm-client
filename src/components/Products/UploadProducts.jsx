@@ -1,4 +1,4 @@
-function UploadProduct(){
+const UploadProduct = () => {
   return(
     <div>
       <h1>Upload Product</h1>

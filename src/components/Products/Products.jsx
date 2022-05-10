@@ -1,19 +1,20 @@
 import { useEffect, useState } from "react";
 
-function App() {
+const Products = () => {
   const [products, setProducts] = useState(false)
 
   useEffect(() => {
     getProducts()
   }, [])
 
-  function getProducts() {
+  const getProducts = () => {
     fetch('http://localhost:8080/products').then(res => {
       return res.text()
     }).then(data => {
       setProducts(data)
     })
   }
+
   return (
     <div>
       {products ? products : 'There are no products here'}
@@ -21,4 +22,4 @@ function App() {
   );
 }
 
-export default App;
+export default Products;
