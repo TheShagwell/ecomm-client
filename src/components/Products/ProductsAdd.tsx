@@ -1,4 +1,4 @@
-const UploadProduct = () => {
+const ProductsAdd = () => {
   return(
     <div>
       <h1>Upload Product</h1>
@@ -34,4 +34,4 @@ const UploadProduct = () => {
   )
 }
 
-export default UploadProduct;
+export default ProductsAdd;

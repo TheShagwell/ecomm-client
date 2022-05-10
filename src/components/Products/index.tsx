@@ -1,5 +1,5 @@
 import Products from "./Products";
-import UploadProduct from "./UploadProducts";
+import ProductsAdd from "./ProductsAdd";
 
 
-export { UploadProduct, Products }
+export { ProductsAdd, Products }
