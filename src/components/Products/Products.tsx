@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const Products = () => {
-  const [products, setProducts] = useState(false)
+  const [products, setProducts] = useState(null)
 
   useEffect(() => {
     getProducts()
