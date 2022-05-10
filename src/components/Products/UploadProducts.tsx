@@ -6,7 +6,7 @@ const UploadProduct = () => {
       <form>
         <div>
           <label>Product name</label>
-          <input type="text" name="product-name" id="" />
+          <input placeholder="Product name" type="text" name="product-name" id="" />
         </div>
         <div>
           <label>Product Image</label>
