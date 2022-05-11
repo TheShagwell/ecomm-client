@@ -1,3 +1,16 @@
 .productItem {
-  border: 1px solid blue;
+  ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+  }
+
+  &__parent {
+
+    ul {
+      list-style-type: none;
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+    }
+  }
 }
